@@ -609,14 +609,76 @@
       <div class="hero-note">✨ Free daily credits • No credit card required • Results in under 10 seconds</div>
 
       <div class="hero-visual">
-        <div class="demo-card" onclick="goToOffer('default')">
-          <video autoplay muted loop playsinline poster="images/model-asian.webp" style="width:100%;height:100%;object-fit:cover;">
+        <div class="demo-card" onclick="goToOffer('default')" style="width:100%;max-width:560px;height:320px;margin:0 auto;">
+          <video autoplay muted loop playsinline poster="images/model-asian.webp" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
             <source src="images/video-hero.webm" type="video/webm">
           </video>
         </div>
-        <div class="demo-card" onclick="goToOffer('default')">
-          <img src="images/all-creations.webp" alt="SoulGen AI creations" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MODES (déplacé sous hero) ========== -->
+  <section class="modes" id="modes" style="padding-top:40px;">
+    <div class="container">
+      <h2 class="section-title">Choose Your AI Model</h2>
+      <p class="section-subtitle">6 stunning AI personalities. Click any to start generating.</p>
+      <div class="modes-grid">
+
+        <div class="mode-card" onclick="goToOffer('default')">
+          <img src="images/model-boss.webp" alt="SoulGen AI Boss Girl" class="mode-img" style="object-fit:cover;">
+          <div class="mode-info">
+            <span class="mode-badge">BOSS</span>
+            <h4>Boss Brunette</h4>
+            <p>Confident brunette with professional style. Corporate power look.</p>
+          </div>
         </div>
+
+        <div class="mode-card" onclick="goToOffer('default')">
+          <img src="images/model-redhead.webp" alt="SoulGen AI Redhead" class="mode-img" style="object-fit:cover;">
+          <div class="mode-info">
+            <span class="mode-badge">REDHEAD</span>
+            <h4>Fiery Redhead</h4>
+            <p>Vibrant red hair with captivating gaze. Bold and passionate energy.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" onclick="goToOffer('default')">
+          <img src="images/model-asian.webp" alt="SoulGen AI Asian Girl" class="mode-img" style="object-fit:cover;">
+          <div class="mode-info">
+            <span class="mode-badge">ASIAN</span>
+            <h4>Asian Beauty</h4>
+            <p>Elegant Asian features with soft, delicate aesthetic. Graceful charm.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" onclick="goToOffer('default')">
+          <img src="images/model-black.webp" alt="SoulGen AI Black Girl" class="mode-img" style="object-fit:cover;">
+          <div class="mode-info">
+            <span class="mode-badge">EBONY</span>
+            <h4>Ebony Goddess</h4>
+            <p>Stunning dark skin with radiant confidence. Bold curves and beauty.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" onclick="goToOffer('default')">
+          <img src="images/model-bikini.webp" alt="SoulGen AI Bikini Girl" class="mode-img" style="object-fit:cover;">
+          <div class="mode-info">
+            <span class="mode-badge">BIKINI</span>
+            <h4>Beach Babe</h4>
+            <p>Red bikini with sun-kissed glow. Summer vibes and playful energy.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" onclick="goToOffer('default')">
+          <img src="images/model-shy.webp" alt="SoulGen AI Shy Girl" class="mode-img" style="object-fit:cover;">
+          <div class="mode-info">
+            <span class="mode-badge">SHY</span>
+            <h4>Shy Brunette</h4>
+            <p>Sweet and innocent with a mysterious allure. Girl-next-door charm.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -703,70 +765,9 @@
       <div style="text-align:center;margin-top:36px;">
         <button class="btn-cta" data-open-modal>🚀 Start Creating Now — It's Free</button>
       </div>
-    </div>
-  </section>
-
-  <!-- ========== MODES ========== -->
-  <section class="modes" id="modes">
-    <div class="container">
-      <h2 class="section-title">Generation Modes & Styles</h2>
-      <p class="section-subtitle">Six distinct creation modes to match every creative vision you have.</p>
-      <div class="modes-grid">
-
-        <div class="mode-card" onclick="goToOffer('default')">
-          <img src="images/model-boss.webp" alt="SoulGen AI Boss Girl" class="mode-img" style="object-fit:cover;">
-          <div class="mode-info">
-            <span class="mode-badge">BOSS</span>
-            <h4>Boss Brunette</h4>
-            <p>Confident brunette with professional style. Corporate power look.</p>
-          </div>
-        </div>
-
-        <div class="mode-card" onclick="goToOffer('default')">
-          <img src="images/model-redhead.webp" alt="SoulGen AI Redhead" class="mode-img" style="object-fit:cover;">
-          <div class="mode-info">
-            <span class="mode-badge">REDHEAD</span>
-            <h4>Fiery Redhead</h4>
-            <p>Vibrant red hair with captivating gaze. Bold and passionate energy.</p>
-          </div>
-        </div>
-
-        <div class="mode-card" onclick="goToOffer('default')">
-          <img src="images/model-asian.webp" alt="SoulGen AI Asian Girl" class="mode-img" style="object-fit:cover;">
-          <div class="mode-info">
-            <span class="mode-badge">ASIAN</span>
-            <h4>Asian Beauty</h4>
-            <p>Elegant Asian features with soft, delicate aesthetic. Graceful charm.</p>
-          </div>
-        </div>
-
-        <div class="mode-card" onclick="goToOffer('default')">
-          <img src="images/model-black.webp" alt="SoulGen AI Black Girl" class="mode-img" style="object-fit:cover;">
-          <div class="mode-info">
-            <span class="mode-badge">EBONY</span>
-            <h4>Ebony Goddess</h4>
-            <p>Stunning dark skin with radiant confidence. Bold curves and beauty.</p>
-          </div>
-        </div>
-
-        <div class="mode-card" onclick="goToOffer('default')">
-          <img src="images/model-bikini.webp" alt="SoulGen AI Bikini Girl" class="mode-img" style="object-fit:cover;">
-          <div class="mode-info">
-            <span class="mode-badge">BIKINI</span>
-            <h4>Beach Babe</h4>
-            <p>Red bikini with sun-kissed glow. Summer vibes and playful energy.</p>
-          </div>
-        </div>
-
-        <div class="mode-card" onclick="goToOffer('default')">
-          <img src="images/model-shy.webp" alt="SoulGen AI Shy Girl" class="mode-img" style="object-fit:cover;">
-          <div class="mode-info">
-            <span class="mode-badge">SHY</span>
-            <h4>Shy Brunette</h4>
-            <p>Sweet and innocent with a mysterious allure. Girl-next-door charm.</p>
-          </div>
-        </div>
-
+      <div style="text-align:center;margin-top:48px;">
+        <img src="images/all-creations.webp" alt="SoulGen AI - All creation types" style="width:100%;max-width:800px;border-radius:var(--radius-lg);border:1px solid var(--border);">
+        <p style="color:var(--text-secondary);font-size:.85rem;margin-top:12px;">Realistic, Anime, DreamTwin, Video, Face Swap & SoulChat — all in one platform.</p>
       </div>
     </div>
   </section>
