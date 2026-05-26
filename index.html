@@ -217,9 +217,9 @@
       gap: 16px;
       flex-wrap: wrap;
     }
-    .hero-visual .demo-card {
-      width: 200px;
-      height: 280px;
+    .hero-visual    .demo-card {
+      width: 280px;
+      height: 200px;
       border-radius: var(--radius-lg);
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -322,10 +322,23 @@
     }
     .mode-card:hover { transform:translateY(-4px); border-color:var(--accent-purple); }
     .mode-img {
-      width:100%; height:260px;
+      width:100%; height:320px;
       background: linear-gradient(135deg, rgba(180,74,255,0.15), rgba(255,107,53,0.08));
       display:flex; align-items:center; justify-content:center;
       font-size:2.5rem;
+      object-fit: cover;
+    }
+    .mode-badge {
+      display:inline-block;
+      background:var(--gradient-cta);
+      color:#fff;
+      font-size:.65rem;
+      font-weight:700;
+      padding:3px 8px;
+      border-radius:4px;
+      margin-bottom:6px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
     }
     .mode-card .mode-info { padding:14px; }
     .mode-card h4 { font-size:.95rem; font-weight:700; margin-bottom:4px; }
@@ -597,16 +610,12 @@
 
       <div class="hero-visual">
         <div class="demo-card" onclick="goToOffer('default')">
-          <div class="placeholder-img">👩</div>
-          <div class="demo-label">Realistic</div>
+          <video autoplay muted loop playsinline poster="images/model-asian.webp" style="width:100%;height:100%;object-fit:cover;">
+            <source src="images/video-hero.webm" type="video/webm">
+          </video>
         </div>
         <div class="demo-card" onclick="goToOffer('default')">
-          <div class="placeholder-img">🎭</div>
-          <div class="demo-label">Anime</div>
-        </div>
-        <div class="demo-card" onclick="goToOffer('default')">
-          <div class="placeholder-img">✨</div>
-          <div class="demo-label">DreamTwin</div>
+          <img src="images/all-creations.webp" alt="SoulGen AI creations" style="width:100%;height:100%;object-fit:cover;">
         </div>
       </div>
     </div>
@@ -705,50 +714,56 @@
       <div class="modes-grid">
 
         <div class="mode-card" onclick="goToOffer('default')">
-          <div class="mode-img">👩</div>
+          <img src="images/model-boss.webp" alt="SoulGen AI Boss Girl" class="mode-img" style="object-fit:cover;">
           <div class="mode-info">
-            <h4>Real Character</h4>
-            <p>Photorealistic portraits with stunning detail. Lifelike skin textures and natural lighting.</p>
+            <span class="mode-badge">BOSS</span>
+            <h4>Boss Brunette</h4>
+            <p>Confident brunette with professional style. Corporate power look.</p>
           </div>
         </div>
 
         <div class="mode-card" onclick="goToOffer('default')">
-          <div class="mode-img">🎭</div>
+          <img src="images/model-redhead.webp" alt="SoulGen AI Redhead" class="mode-img" style="object-fit:cover;">
           <div class="mode-info">
-            <h4>Anime Character</h4>
-            <p>Stylized Japanese animation aesthetic. From manga art to soft "waifu" styles.</p>
+            <span class="mode-badge">REDHEAD</span>
+            <h4>Fiery Redhead</h4>
+            <p>Vibrant red hair with captivating gaze. Bold and passionate energy.</p>
           </div>
         </div>
 
         <div class="mode-card" onclick="goToOffer('default')">
-          <div class="mode-img">💫</div>
+          <img src="images/model-asian.webp" alt="SoulGen AI Asian Girl" class="mode-img" style="object-fit:cover;">
           <div class="mode-info">
-            <h4>DreamTwin</h4>
-            <p>Idealized paired characters with dreamy, romantic aesthetic. Perfect for fantasy.</p>
+            <span class="mode-badge">ASIAN</span>
+            <h4>Asian Beauty</h4>
+            <p>Elegant Asian features with soft, delicate aesthetic. Graceful charm.</p>
           </div>
         </div>
 
         <div class="mode-card" onclick="goToOffer('default')">
-          <div class="mode-img">🎥</div>
+          <img src="images/model-black.webp" alt="SoulGen AI Black Girl" class="mode-img" style="object-fit:cover;">
           <div class="mode-info">
-            <h4>AI Video</h4>
-            <p>Animate static images into 5-20 second clips. Facial animations and scene transitions.</p>
+            <span class="mode-badge">EBONY</span>
+            <h4>Ebony Goddess</h4>
+            <p>Stunning dark skin with radiant confidence. Bold curves and beauty.</p>
           </div>
         </div>
 
         <div class="mode-card" onclick="goToOffer('default')">
-          <div class="mode-img">🔀</div>
+          <img src="images/model-bikini.webp" alt="SoulGen AI Bikini Girl" class="mode-img" style="object-fit:cover;">
           <div class="mode-info">
-            <h4>Face Swap</h4>
-            <p>Upload a reference face and apply it to any image. Maintain consistency across scenes.</p>
+            <span class="mode-badge">BIKINI</span>
+            <h4>Beach Babe</h4>
+            <p>Red bikini with sun-kissed glow. Summer vibes and playful energy.</p>
           </div>
         </div>
 
         <div class="mode-card" onclick="goToOffer('default')">
-          <div class="mode-img">💬</div>
+          <img src="images/model-shy.webp" alt="SoulGen AI Shy Girl" class="mode-img" style="object-fit:cover;">
           <div class="mode-info">
-            <h4>SoulChat</h4>
-            <p>Interactive AI companion with text, voice calls, and mid-chat image generation.</p>
+            <span class="mode-badge">SHY</span>
+            <h4>Shy Brunette</h4>
+            <p>Sweet and innocent with a mysterious allure. Girl-next-door charm.</p>
           </div>
         </div>
 
