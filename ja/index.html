@@ -1143,7 +1143,7 @@
   <div class="modal-overlay" id="modal-overlay"></div>
   <div class="preference-modal" id="preference-modal">
     <button class="modal-close" id="modal-close">&times;</button>
-    <div class="modal-title">Get Started with SoulGen AI</div>
+    <div class="modal-title">SoulGen AIで始める</div>
     <div class="modal-subtitle">Choose your preference to continue</div>
     <div class="pref-options">
       <button class="pref-btn" data-preference="women">
@@ -1186,7 +1186,7 @@
     (function() {
       var popupOverlay = document.getElementById('popup-overlay');
       var popupModal = document.getElementById('popup-modal');
-      var popupClose = document.getElementById('popup-close');
+      var popup閉じる = document.getElementById('popup-close');
 
       function openPopup() {
         if (popupOverlay && popupModal) {
@@ -1210,8 +1210,8 @@
         }, 3000);
       }
 
-      // Close handlers
-      if (popupClose) popupClose.addEventListener('click', closePopup);
+      // 閉じる handlers
+      if (popup閉じる) popup閉じる.addEventListener('click', closePopup);
       if (popupOverlay) popupOverlay.addEventListener('click', closePopup);
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closePopup();
