@@ -1114,7 +1114,32 @@
     </div>
   </footer>
 
-  <!-- ========== MODAL ========== -->
+  <!-- ========== POPUP 3s ========== -->
+  <div class="modal-overlay" id="popup-overlay"></div>
+  <div class="preference-modal" id="popup-modal" style="max-width:420px;">
+    <button class="modal-close" id="popup-close">&times;</button>
+    <div class="modal-title" style="font-size:1.4rem;">🔥 Create Your Perfect Girlfriend</div>
+    <div class="modal-subtitle" style="margin-bottom:28px;">What type of AI companion do you want?</div>
+    <div class="pref-options" style="flex-direction:column;gap:14px;">
+      <button class="pref-btn" onclick="goToOffer('women');closePopup();" style="display:flex;align-items:center;gap:16px;padding:18px 24px;width:100%;">
+        <div class="pref-icon" style="font-size:2.2rem;">👩</div>
+        <div style="text-align:left;">
+          <div style="font-size:1rem;font-weight:700;">Real Girl</div>
+          <div style="font-size:.8rem;color:var(--text-secondary);">Photorealistic AI girlfriend</div>
+        </div>
+      </button>
+      <button class="pref-btn" onclick="goToOffer('anime');closePopup();" style="display:flex;align-items:center;gap:16px;padding:18px 24px;width:100%;">
+        <div class="pref-icon" style="font-size:2.2rem;">🎭</div>
+        <div style="text-align:left;">
+          <div style="font-size:1rem;font-weight:700;">Anime Girl</div>
+          <div style="font-size:.8rem;color:var(--text-secondary);">Stylized anime waifu</div>
+        </div>
+      </button>
+    </div>
+    <div class="modal-note" style="margin-top:16px;">✨ Takes 10 seconds • Free to start • No credit card</div>
+  </div>
+
+  <!-- ========== MODAL (boutons CTA) ========== -->
   <div class="modal-overlay" id="modal-overlay"></div>
   <div class="preference-modal" id="preference-modal">
     <button class="modal-close" id="modal-close">&times;</button>
@@ -1154,6 +1179,44 @@
         if (!wasOpen) item.classList.add('open');
       });
     });
+  </script>
+
+  <!-- Popup 3s script -->
+  <script>
+    (function() {
+      var popupOverlay = document.getElementById('popup-overlay');
+      var popupModal = document.getElementById('popup-modal');
+      var popupClose = document.getElementById('popup-close');
+
+      function openPopup() {
+        if (popupOverlay && popupModal) {
+          popupOverlay.classList.add('active');
+          popupModal.classList.add('active');
+        }
+      }
+
+      window.closePopup = function() {
+        if (popupOverlay && popupModal) {
+          popupOverlay.classList.remove('active');
+          popupModal.classList.remove('active');
+        }
+      };
+
+      // Auto-open after 3s, 1x per session
+      if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(function() {
+          openPopup();
+          sessionStorage.setItem('popupShown', 'true');
+        }, 3000);
+      }
+
+      // Close handlers
+      if (popupClose) popupClose.addEventListener('click', closePopup);
+      if (popupOverlay) popupOverlay.addEventListener('click', closePopup);
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closePopup();
+      });
+    })();
   </script>
 
   <!-- Affiliate config -->
