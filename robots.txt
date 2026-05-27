@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /privacy.html
-Disallow: /terms.html
-Disallow: /affiliate-disclosure.html
+Disallow: /privacy/
+Disallow: /terms/
+Disallow: /affiliate-disclosure/
 
 Sitemap: https://ai-soulgen.com/sitemap.xml
